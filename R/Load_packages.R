@@ -49,7 +49,7 @@ for(i in 1:length(pkgs)){
 
 
 # Nebulosa for density plotting
-#devtools::install_github("powellgenomicslab/Nebulosa")
+devtools::install_github("powellgenomicslab/Nebulosa")
 library("Nebulosa")
 
 ######################
@@ -57,7 +57,7 @@ library("Nebulosa")
 ######################
 
 #devtools::install_github('satijalab/seurat-data')
-#devtools::install_github('satijalab/seurat-wrappers')
+devtools::install_github('satijalab/seurat-wrappers')
 library("SeuratWrappers")
 
 
