@@ -13,7 +13,7 @@ working.dir <- getwd()
 set.seed(42)
 
 # Load custom functions
-source("R/Functions/scRNAseq_function.R", local = knitr::knit_global())
+source("scripts/Functions/scRNAseq_function.R", local = knitr::knit_global())
 
 
 ###############################
@@ -21,10 +21,10 @@ source("R/Functions/scRNAseq_function.R", local = knitr::knit_global())
 ###############################
 
 # Common directories 
-if(!dir.exists("Exported_RDS_files")){dir.create("Exported_RDS_files", recursive = T)}
+if(!dir.exists("saves")){dir.create("saves", recursive = T)}
 
 # scRNAseq directories
-if(!dir.exists("output")){dir.create("output", recursive = T)}
-if(!dir.exists("output/figures")){dir.create("output/figures", recursive = T)}
-if(!dir.exists("output/tables")){dir.create("output/tables", recursive = T)}
-if(!dir.exists("output/QC")){dir.create("output/QC", recursive = T)}
+if(!dir.exists("results")){dir.create("results", recursive = T)}
+if(!dir.exists("results/figures")){dir.create("results/figures", recursive = T)}
+if(!dir.exists("results/tables")){dir.create("results/tables", recursive = T)}
+if(!dir.exists("results/QC")){dir.create("results/QC", recursive = T)}
