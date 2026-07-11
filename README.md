@@ -1,51 +1,25 @@
-# TEMP TITLE
+# Cillo et al. 2020 — HNSCC immune landscape (re-analysis)
 
-## Project Summary
+Re-analysis of the publicly available single-cell dataset from:
 
-Understand the .....
+> **Cillo AR, Kürten CHL, Tabib T, et al. Immune Landscape of Viral- and Carcinogen-Driven Head and Neck Cancer.**  
+> *Immunity* 2020. https://doi.org/10.1016/j.immuni.2019.11.014  
+> Data: GEO: GSE139324
 
-## To-Do
+## Dataset at a glance
+- **System:** Human head & neck squamous cell carcinoma (HNSCC) and healthy-donor CD45+ immune cells
+- **Assay:** 10x Genomics scRNA-seq
+- **Accession / source:** GEO: GSE139324
 
--   [ ] Placeholder
+## What this repository does
+Preprocesses the Cillo et al. CD45+ immune-cell dataset into a clean, annotated Seurat object (QC, normalisation, clustering, cell-type annotation) as a foundation for downstream NK / T-cell analyses. See `scripts/01_Cillo_Immunity_HNSCC_PreProcessing.Rmd`.
 
-## Dataset Info
+## Repository structure
+- `scripts/` — analysis pipeline (numbered `.Rmd` scripts run in order)
+- `Setup.R` / `Load_packages.R` — environment setup and package loading
+- Large data objects are **not** tracked in Git — download from the source above.
+- `renv.lock` — pinned package versions for reproducibility (`renv::restore()`).
 
--   FILL OUT
-
-    
-## Development Notes
-
--   FILL OUT
-
-## File Structure
-
-The repository contains the following top-level directories:
-
-- **`data/`** _(ignored by Git)_  
-  - Contains output from `cellranger`  
-  - Will be uploaded to Zenodo for accessibility.
-
-- **`results/`** _(ignored by Git)_  
-  - Stores processed analysis results.  
-  - Not tracked in version control.
-
-- **`saves/`** _(ignored by Git)_  
-  - Contains intermediate objects such as Seurat objects.  
-  - These files will also be uploaded to Zenodo.
-
-- **`scripts/`**  
-  - Includes all analysis and processing scripts.
-  - Tracked in version control.
-    - **`01_Preprocessing.Rmd`**
-      - Reads in `cellranger` output and performs the following 
-      - QC, Ambient RNA removal, Doublet detection, Normalisation, Integration, Dim Reduction, cluster calling
-
-## Data availability
-
-- Raw Data (Upload to GEO and provide link)  
-- `cellranger` output (upload zenodo link)
-- `seurat.objects` (upload zenodo link)
-
-## Author Information
-
--   [Dillon Corvino](https://github.com/Eomesodermin)
+---
+Part of my NK / T-cell single-cell research programme — see my [GitHub profile](https://github.com/Eomesodermin) and [dilloncorvino.com](https://dilloncorvino.com).  
+Author: **Dillon Corvino**
