@@ -18,8 +18,20 @@ Preprocesses the Cillo et al. CD45+ immune-cell dataset into a clean, annotated 
 - `scripts/` — analysis pipeline (numbered `.Rmd` scripts run in order)
 - `Setup.R` / `Load_packages.R` — environment setup and package loading
 - Large data objects are **not** tracked in Git — download from the source above.
-- `renv.lock` — pinned package versions for reproducibility (`renv::restore()`).
 
 ---
 Part of my NK / T-cell single-cell research programme — see my [GitHub profile](https://github.com/Eomesodermin) and [dilloncorvino.com](https://dilloncorvino.com).  
 Author: **Dillon Corvino**
+
+## Environment
+
+Built in **R** with a Seurat-based single-cell stack — key packages: `Seurat`, `SeuratDisk`, `scCustomize`, `dplyr`, `ggplot2`, `Nebulosa`, `SeuratWrappers`, plus my helper package [`r-utility-functions`](https://github.com/Eomesodermin/r-utility-functions).
+
+A pinned `renv.lock` is **not** committed for this repository. To capture an exact, reproducible
+environment, run in the project root:
+
+```r
+install.packages("renv")
+renv::init()        # discovers dependencies from the scripts
+renv::snapshot()    # writes renv.lock pinning every package version
+```
