@@ -52,3 +52,9 @@ Thumbs.db
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
+
+# large data (download from GEO GSE139324; see README)
+Data
+data
+results
+saves/
